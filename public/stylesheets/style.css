@@ -2,7 +2,7 @@ body { margin:0; font-size:0.8em; line-height:16px; background-color:#FFFFFF; fo
 a { color:#2D5A71;}
 a:hover { text-decoration:none;}
 
-#container { background: url(images/bckg.jpg) 0 100px repeat-x #D1DBBD; height: 100%;}
+#container { background: #D1DBBD; height: 100%;}
 #header { background: url(images/header_bckg.jpg) repeat-x #193441;  }
 #logo { padding:30px 0 0 0; text-align:center; }
 #logo a{ color:#FFFFFF; text-decoration:none; font-weight:bold; height:36px; font-size:30px; text-transform:uppercase;}
