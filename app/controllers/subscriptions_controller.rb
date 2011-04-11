@@ -8,16 +8,16 @@ class SubscriptionsController < ApplicationController
   
   # GET /subscriptions
   # GET /subscriptions.xml
-  def index
-    #if session[:user_id] 
+  def index 
+    if session[:user_id] 
       @subscriptions = Subscription.all(:conditions => ["user_id = ?", session[:user_id]])
       respond_to do |format|
         format.html # index.html.erb
         format.xml  { render :xml => @subscriptions }
       end
-    #else
-    #  redirect_to "/login"
-    #end
+    else
+      redirect_to "/login"
+    end
   end
 
   # GET /subscriptions/1
