@@ -1,0 +1,31 @@
+<div>
+	<%= form_tag :action=>'authenticate' %>
+		<table>
+			<tr>
+				<td colspan="2">Login</td>
+			</tr>
+			<tr>
+				<td>
+					Email: 
+				</td>
+				<td>
+					<%= text_field("login", "email", :size => 20) %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Password:
+				</td>
+				<td>
+					<%= password_field("login", "password", :size => 20) %>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Login" />
+					<%= link_to "Register", "/register" %>
+				</td>
+			</tr>
+		</table>
+</div>

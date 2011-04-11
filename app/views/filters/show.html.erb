@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Subscription:</b>
+  <%= @s %>
+</p>
+<p>
+  <b>Name:</b>
+  <%= @filter.name %>
+</p>
+
+<br />
+
+<%= link_to 'Edit', edit_filter_path(@filter) %> |
+<%= link_to 'Back', filters_path %>

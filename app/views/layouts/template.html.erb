@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+		<%= javascript_include_tag :all %>
+		<%= stylesheet_link_tag "style" %>
+		<%= stylesheet_link_tag "scaffold" %>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="logo"><a href="#"></a></div>
+		        <div id="menu">
+		        	<ul>
+		              <li><%= link_to "Home", "/" %></li>
+					  <% if !session[:user_id].nil? %>
+					  	<li>
+					  		<%= link_to "Filters", "/filters" %>
+						</li>
+					  <% end %>
+					  <li>
+					  	<% if session[:user_id].nil? %>
+							<%= link_to "Login", "/login" %>
+						<% else %>
+							<%= link_to "Logout", "/logout" %>
+						<% end %>
+						</li>
+		          	</ul>
+		      	</div>
+			</div>
+			<div id="main">
+				<div id="content">
+					<%= yield %>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="left_footer">
+				
+				</div>
+				<div id="right_footer">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

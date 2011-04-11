@@ -1,0 +1,22 @@
+<h1>Listing subscriptions</h1>
+<br />
+<%= @rss.channel.title %>
+<br />
+
+<% @link.each do |item| %>
+	<div>
+		<h3><%=item[1]%></h3>
+	</div>
+	<img src="<%= raw(item[0].to_s)%>" alt="" style="max-width: 760px" /> 
+	<br /><br /><hr />
+<% end %>
+
+<% @arrPosts.each do |item| %>
+	<div style="padding: 10px;">
+		<%= link_to item[0], item[1] %>
+	</div>
+	<div style="padding: 10px;">
+		<%= raw(item[2]) %>
+	</div>
+	<hr />
+<% end %>
