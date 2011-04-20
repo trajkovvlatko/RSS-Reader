@@ -72,7 +72,7 @@ class FiltersController < ApplicationController
   # POST /filters.xml
   def create
     if session[:user_id]
-      sub = Subscription.find(params[:filter][:subscription_id]).first
+      sub = Subscription.find(params[:filter][:subscription_id])
       
       @filter = Filter.new
       @filter.name = params[:filter][:name]
